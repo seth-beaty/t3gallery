@@ -22,6 +22,7 @@ export function TopNav() {
             <UserButton></UserButton>
         </SignedIn>
         </div>
+       
     </nav>
 );
 }
