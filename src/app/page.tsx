@@ -1,5 +1,5 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import { getMyImages } from "~/server/db/queries";
+import { getMyImages } from "~/server/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -20,8 +20,6 @@ const images = await getMyImages();
 
 export default async function HomePage() {
 
-  
-  
   return (
     <main>
       <SignedOut>
