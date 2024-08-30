@@ -45,7 +45,7 @@ export default function RootLayout({
 
           {modal}
           <div id="modal-root"></div>
-          <Toaster />
+          <Toaster theme="dark" />
         </body>
       </html>
     </ClerkProvider>
