@@ -9,8 +9,8 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 
-const inter = Inter({ 
-  subsets: ["latin"], 
+const inter = Inter({
+  subsets: ["latin"],
   variable: "--font-sans",
 });
 
@@ -23,28 +23,29 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   modal,
-}: Readonly<{ children: React.ReactNode,
-  modal: React.ReactNode,
- }>) {
+}: Readonly<{ children: React.ReactNode; modal: React.ReactNode }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body  className={`${inter.variable} flex-col gap-4`}>
-      <NextSSRPlugin
-          /**
-           * The `extractRouterConfig` will extract **only** the route configs
-           * from the router to prevent additional information from being
-           * leaked to the client. The data passed to the client is the same
-           * as if you were to fetch `/api/uploadthing` directly.
-           */
-          routerConfig={extractRouterConfig(ourFileRouter)}
-        />
-        <TopNav />
-        {children}
-        {modal}
-        <div id="modal-root"></div>
-      </body>
-    </html>
+      <html lang="en">
+        <body className={`${inter.variable}`}>
+          <NextSSRPlugin
+            /**
+             * The `extractRouterConfig` will extract **only** the route configs
+             * from the router to prevent additional information from being
+             * leaked to the client. The data passed to the client is the same
+             * as if you were to fetch `/api/uploadthing` directly.
+             */
+            routerConfig={extractRouterConfig(ourFileRouter)}
+          />
+          <div className="grid h-screen grid-rows-[auto,1fr]">
+            <TopNav />
+            <main className="overflow-y-scroll">{children}</main>
+          </div>
+
+          {modal}
+          <div id="modal-root"></div>
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
