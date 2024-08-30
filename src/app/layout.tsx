@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${inter.variable}`}>
+        <body className={`${inter.variable} dark`}>
           <NextSSRPlugin
             /**
              * The `extractRouterConfig` will extract **only** the route configs
