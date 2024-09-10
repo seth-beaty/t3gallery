@@ -15,6 +15,7 @@ const coreConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  experimental: { optimisticClientCache: false },
   async rewrites() {
     return [
       {
