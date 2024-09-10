@@ -16,5 +16,6 @@
 - [x] Update upload button to be less cringe
 - [x] ShadUIify (specifically toast)
 - [x] Analytics (posthog)
-- [ ] Delete button (Server Actions)
-- [ ] Ratelimiting (upstash)
+- [x] Delete button (Server Actions)
+- [x] Ratelimiting (upstash)
+- [x] Fix the page layout for iamges of different sizes
