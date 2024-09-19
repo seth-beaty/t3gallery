@@ -45,7 +45,7 @@ export const posts = createTable(
     name: varchar("name", { length: 256 }).notNull(),
     url: varchar("url", { length: 1024 }).notNull(),
     description: varchar("description", { length: 4112 }),
-    is_modal: boolean("is_modal").notNull(),
+    isModal: boolean("is_modal").notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
