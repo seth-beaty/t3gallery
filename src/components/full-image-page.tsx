@@ -39,6 +39,17 @@ export default async function FullPageImageView(props: { id: string }) {
             </Button>
           </form>
         </div>
+        <div className="p-2">
+          <form
+            action={async () => {
+              "use server";
+
+              redirect("/");
+            }}
+          >
+            <Button type="submit">Back</Button>
+          </form>
+        </div>
       </div>
     </div>
   );
