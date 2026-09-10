@@ -38,6 +38,7 @@
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
+    "update": "^0.7.4",
     "uploadthing": "^6.13.2",
     "zod": "^3.23.3"
   },
@@ -61,5 +62,14 @@
   "ct3aMetadata": {
     "initVersion": "7.37.0"
   },
-  "packageManager": "npm@10.3.0"
+  "packageManager": "npm@10.3.0",
+  "allowScripts": {
+    "@clerk/shared@2.9.2": true,
+    "@sentry/cli@2.39.1": true,
+    "bufferutil@4.1.0": true,
+    "core-js@3.49.0": true,
+    "esbuild@0.19.12": true,
+    "unrs-resolver@1.11.1": true,
+    "utf-8-validate@6.0.6": true
+  }
 }

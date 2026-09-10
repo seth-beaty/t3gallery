@@ -1,5 +1,6 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { SimpleUploadButton } from "./simple-upload-button";
+import { RequestUploadPermissions } from "./request-upload-permissions";
 
 export function TopNav() {
   return (
@@ -10,6 +11,7 @@ export function TopNav() {
           <SignInButton />
         </SignedOut>
         <SignedIn>
+          <RequestUploadPermissions />
           <SimpleUploadButton />
           <UserButton></UserButton>
         </SignedIn>
